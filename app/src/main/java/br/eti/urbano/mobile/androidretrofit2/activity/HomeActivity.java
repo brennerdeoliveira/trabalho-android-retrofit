@@ -18,23 +18,19 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void show(View view) {
-
-        switch (view.getId()){
-
-            case R.id.btnUser:
-
-                Intent intent = new Intent(this,UserActivity.class);
-                startActivity(intent);
-
+        switch (view.getId()) {
+            case R.id.btnPost:
+                startActivity(new Intent(this, UserActivity.class));
                 break;
-
+            case R.id.btnPhoto:
+                startActivity(new Intent(this, PhotoActivity.class));
+                break;
             default:
                 Toast.makeText(this,
                         "Erro ao selecionar opção",
                         Toast.LENGTH_SHORT).show();
-                break;
         }
 
-
     }
+
 }
